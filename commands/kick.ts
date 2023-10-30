@@ -1,7 +1,8 @@
-/* const { EmbedBuilder, PermissionsBitField } = require("discord.js");
+const { EmbedBuilder, PermissionsBitField } = require("discord.js");
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 export = {
+  disabled: true,
   data: new SlashCommandBuilder()
     .setName("kick")
     .setDescription("Kick a member from the server")
@@ -35,4 +36,3 @@ export = {
     if (usr.id === interaction.member.id) return interaction.reply(langUS.kickSame(config))
   }
 };
- */
