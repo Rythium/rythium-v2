@@ -87,7 +87,8 @@ const slashcommands = [];
 readdirSync("./commands").forEach(async (file) => {
   if (path.extname(file) != ".js") return;
 
-  const command = await require(`./commands/${file}`);
+  console.log(file)
+  const command = require(`./commands/${file}`);
   slashcommands.push(command.data.toJSON());
   client.slashcommands.set(command.data.name, command);
 });

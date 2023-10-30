@@ -2,7 +2,7 @@ const { InteractionType } = require("discord.js");
 var config = require("../config.json");
 var lang = require("../langs/hu_HU"); // TODO language getting logic
 
-module.exports = {
+export = {
   name: "interactionCreate",
   execute: async (interaction) => {
     let client = interaction.client;

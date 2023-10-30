@@ -42,6 +42,7 @@
     "passport": "^0.6.0",
     "passport-discord": "^0.1.4",
     "random-cat-img": "^1.1.4",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "walk": "^2.3.15"
   }
 }
