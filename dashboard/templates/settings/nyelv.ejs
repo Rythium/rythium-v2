@@ -1,0 +1,65 @@
+<%- include("../partials/header", { bot, user, path, title: `${guild.name} - Rythium` }) %>
+
+<link rel="stylesheet" href="/css/settings.css">
+
+<%- include("../partials/settingsHeader", { bot, user, path, perms, title: ""}) %>
+
+    <!--<div class="container-sm center" style="margin-top: 30px;">
+  <div class="d-grid gap-2 col-4 mx-auto">
+    <% if (alert) { %>
+      <div class="alert alert-success" role="alert">
+        <%= alert %>
+      </div>
+    <% } %>
+    <h1><%= guild.name %></h1>
+    <hr>
+    <form method="POST">
+      <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;">lang:</p>
+      <p style="font-style: italic;" class="disabled">A lang a parancsok elé kerül</p>
+      <input type="text" class="form-control" name="lang" value="<%= settings.lang %>" placeholder="%">
+      <br><button type="submit" class="btn btn-primary text-white">Beállítások mentése</button>
+    </form>
+  </div>
+</div>-->
+
+    <!--<link rel="stylesheet" href="/css/settings.css">
+
+    <%- include("../partials/settingsHeader") %>
+
+    <div class="container-sm center" style="margin-top: 30px;">
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <% if (alert) { %>
+            <div class="alert alert-success" role="alert">
+              <%= alert %>
+            </div>
+          <% } %>
+          <form method="POST">
+            <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;">lang:</p>
+            <p style="font-style: italic;" class="disabled">A lang a parancsok elé kerül</p>
+            <input type="text" class="form-control" name="lang" value="<%= settings.lang %>" placeholder="%">
+            <br><button type="submit" class="btn btn-primary text-white">Beállítások mentése</button>
+          </form>
+        </div>
+      </div>-->
+      <div style="margin-left: 0.5%;">
+      <div class="card hide-on-mobile" style="padding: 0;">
+        <div style="margin-left: 5%;" class="d-grid gap-2">
+      <form method="POST">
+        <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Nyelv</strong></p>
+        <p class="disabled">Ez az funkció ideiglenesen le van tilva!</p>
+     </form>
+    </div>
+  </div>
+  
+  <link rel="stylesheet" href="/css/settings-mobile.css">
+  
+  <div style="margin-left: 12%;" class="card hide-on-pc" style="padding: 0;">
+    <div style="margin-left: 5%;" class="d-grid gap-2">
+  <form method="POST">
+    <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Nyelv</strong></p>
+    <p class="disabled">Ez az funkció ideiglenesen le van tilva!</p>
+  </form>
+  </div>
+  </div>
+    
+    <%- include("../partials/footer") %>

@@ -1,0 +1,27 @@
+<%- include("../partials/header", { bot, user, path, title: `${guild.name} - Rythium` }) %>
+
+<link rel="stylesheet" href="/css/settings.css">
+
+<%- include("../partials/settingsHeader", { bot, user, path, perms, title: ""}) %>
+<div style="margin-left: 0.5%;">
+<div class="card hide-on-mobile" style="padding: 0;">
+  <div style="margin-left: 5%;" class="d-grid gap-2">
+<form method="POST">
+  <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Autorole</strong></p>
+  <p class="disabled">Ez az funkció ideiglenesen le van tilva!</p>
+</form>
+</div>
+</div>
+
+<link rel="stylesheet" href="/css/settings-mobile.css">
+
+<div style="margin-left: 12%;" class="card hide-on-pc" style="padding: 0;">
+<div style="margin-left: 5%;" class="d-grid gap-2">
+<form method="POST">
+<p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Autorole</strong></p>
+<p class="disabled">Ez az funkció ideiglenesen le van tilva!</p>
+</form>
+</div>
+</div>
+    
+    <%- include("../partials/footer") %>

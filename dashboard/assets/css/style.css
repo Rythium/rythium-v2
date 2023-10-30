@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+  --back-color: hsl(206 9% 40% / 1);
+}
+
+.hvr-bounce-to-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.hvr-bounce-to-bottom:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--back-color);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-bottom:hover,
+.hvr-bounce-to-bottom:focus,
+.hvr-bounce-to-bottom:active {
+  color: white;
+}
+
+.hvr-bounce-to-bottom:hover:before,
+.hvr-bounce-to-bottom:focus:before,
+.hvr-bounce-to-bottom:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.navbar {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  height: calc(40px + 16px)
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container-fluid,
+div.collapse.navbar-collapse,
+.navbar-nav {
+  height: 100%;
+  text-align: center;
+  line-height: 50%;
+  display: flex;
+  justify-content: left;
+
+  flex-wrap:nowrap;
+  flex-direction: row !important;
+}
+
+.dropdown-item,
+.dropdown-item li {
+  height: 100%
+}
+
+
+
+.rainbow_text_animated {
+  animation: rainbow_animation 1s ease-in-out infinite !important;
+  background-size: 400% 100% !important;
+}
+
+*{
+  outline: none;
+
+}
+
+@keyframes rainbow_animation {
+
+  0%,
+  100% {
+    color: gradient
+  }
+
+  33% {
+    color: green
+  }
+
+  66% {
+    color: blue
+  }
+
+}
+
+li div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+li div a {
+  display: block;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+li * {
+  cursor: pointer;
+}
+
+.navbar-brand {
+  height: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+
+ *:not(.ownershipStatus, .fa) {
+  font-family: "Montserrat",sans-serif;
+  font-weight: 700; 
+}
+ 
+
+@media screen and (max-width: 800px) {
+  .hide-on-mobile{
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* A "hide-on-mobile-header"-t ne töröld!!!"*/
+
+@media screen and (max-width: 1199px) {
+  .hide-on-mobile-header{
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .hide-on-pc{
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.flex{
+  display: flex !important;
+}
+
+.grid{
+  display: grid !important;
+}

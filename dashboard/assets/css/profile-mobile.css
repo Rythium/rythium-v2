@@ -1,0 +1,110 @@
+@media screen and (max-width: 800px) { 
+.server-logo {
+  /*     min-width: 18rem;
+      min-height: 18rem; */
+
+  /*max-width: 300px;*/
+  max-height: 650px;
+
+  /*filter: blur(24px);*/
+
+  margin: -5px -10px -10px -5px;
+
+}
+
+div.card-body {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  bottom: 0;
+  color: white;
+  background-color: #313338;
+
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+}
+
+.butn {
+  right: 2%;
+  position: absolute;
+  bottom: 5%;
+  border-radius: 10px !important;
+}
+
+.btn-invite {
+  border: 0.1px solid #0059ff
+}
+
+.card {
+  max-width: 24rem;
+  margin: 10px;
+  min-width: 24rem;
+
+  border-radius: 10px !important;
+
+}
+
+.icon-holder {
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+
+.server-icon {
+  height: 65px;
+  width: 65px;
+  top: -10%;
+  /*position: relative;*/
+  border-radius: 100px;
+
+  border: 5px solid #313338;
+  background-color: #313338;
+}
+
+.server-name {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center
+}
+
+.card-title {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.name {
+  position: absolute;
+  left: 5%;
+  bottom: 10px;
+
+  margin: 0 !important;
+}
+
+.center {
+  padding: 70px 0;
+  color: white;
+  text-align: center;
+}
+
+hr.profile {
+  border: 1px solid white;
+}
+
+.flex {
+  gap: 5px;
+  flex-direction: row;
+  align-items: center
+}
+
+.grid {
+  grid-template-columns: repeat(1, 1fr) !important;
+  position: absolute;
+  left: 5%
+}
+}

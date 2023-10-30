@@ -1,0 +1,14 @@
+{
+    "falseemoji": "<:rythium_false:1007372900870922370>",
+    "trueemoji": "<:rythium_true:1007372959687647335>",
+    "loadingemoji": "<a:rythium_loading:1007313824749211681>",
+    "arrow_left": "<:rythium_arrow_left:1025514203307589664>",
+    "rythium_logo": "<:rythium_logo:1007370415942938734>",
+    "rythiumszin": "#217a30",
+
+    "port": 80, 
+    "usingCustomDomain": false,
+    "includePort": false,
+    "domain": "http://localhost:80",
+    "discordInvite": "https://discord.gg/"
+}

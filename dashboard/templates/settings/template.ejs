@@ -1,0 +1,102 @@
+<%- include("../partials/header", { bot, user, path, title: `${guild.name} - Rythium` }) %>
+
+    <link rel="stylesheet" href="/css/settings.css">
+
+    <%- include("../partials/settingsHeader", { bot, user, path, perms, title: ""}) %>
+
+    <!--<script>
+      function sure(e){
+          e.remove()
+          var biztosBtn = document.getElementById("biztos");
+          biztosBtn.style.display = "block";
+          biztosBtn.style.visibility = "visible";
+      }
+  </script>
+
+    <div class="card hide-on-mobile" style="padding: 0;">
+      <div style="margin-left: 5%;" class="d-grid gap-2">
+        <% if (alert) { %>
+          <div class="alert alert-success" role="alert">
+            <%= alert %>
+          </div>
+        <% } %>
+        <div >
+        <form method="POST">
+          <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Template1</strong></p>
+          <p class="disabled">Ez a parancs törli az összes csatornát/rangot és újjakat hozz létre!</p>
+          <input type="text" style="display:none;" id="temp" name="template">
+          <select class="form-select" style="width: 230px; border-radius: 10px; " aria-label="Default select example" id="tempSel">
+            <script>
+              var sel = document.getElementById("tempSel");
+              var tempTxt = document.getElementById("temp")
+
+            setInterval(()=>{
+            tempTxt.value =  sel.options[sel.selectedIndex].text;
+            })
+            </script>
+            <option selected>Template 1</option>
+            <option value="1">Template 1</option>
+          </select>
+          <br><button id="set" onclick="sure(this)" class="butn btn btn-primary btn-save text-white"><strong>Template beállítása</strong></button>
+          <button id="biztos" style="visibility:hidden; display:none" type="submit" class="butn btn btn-primary btn-save text-white"><strong>Biztos vagy benne?</strong></button>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <%-//telefonnnn%>
+
+    <link rel="stylesheet" href="/css/settings-mobile.css">
+
+    <div style="margin-left: 12%;" class="card hide-on-pc" style="padding: 0;">
+      <div style="margin-left: 5%;" class="d-grid gap-2">
+        <% if (alert) { %>
+          <div class="alert alert-success" role="alert">
+            <%= alert %>
+          </div>
+        <% } %>
+        <div >
+        <form method="POST">
+          <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Template1</strong></p>
+          <p class="disabled">Ez a parancs törli az összes csatornát/rangot és újakat hozz létre!</p>
+          <input type="text" style="display:none;" id="temp" name="template">
+          <select class="form-select" style="width: 230px; border-radius: 10px; " aria-label="Default select example" id="tempSel">
+            <script>
+              var sel = document.getElementById("tempSel");
+              var tempTxt = document.getElementById("temp")
+
+            setInterval(()=>{
+            tempTxt.value =  sel.options[sel.selectedIndex].text;
+            })
+            </script>
+            <option selected>Template 1</option>
+            <option value="1">Template 1</option>
+          </select>
+          <br><button id="set" onclick="sure(this)" class="butn btn btn-primary btn-save text-white"><strong>Template beállítása</strong></button>
+          <button id="biztos" style="visibility:hidden; display:none" type="submit" class="butn btn btn-primary btn-save text-white"><strong>Biztos vagy benne?</strong></button>
+        </form>
+        </div>
+      </div>
+    </div>-->
+    <div style="margin-left: 0.5%;">
+    <div class="card hide-on-mobile" style="padding: 0;">
+      <div style="margin-left: 5%;" class="d-grid gap-2">
+    <form method="POST">
+      <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Template</strong></p>
+      <p class="disabled">Ez az funkció ideiglenesen le van tilva!</p>
+   </form>
+  </div>
+</div>
+
+<link rel="stylesheet" href="/css/settings-mobile.css">
+
+<div style="margin-left: 12%;" class="card hide-on-pc" style="padding: 0;">
+  <div style="margin-left: 5%;" class="d-grid gap-2">
+<form method="POST">
+  <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Template</strong></p>
+  <p class="disabled">Ez az funkció ideiglenesen le van tilva!</p>
+</form>
+</div>
+</div>
+    
+    <%- include("../partials/footer") %>

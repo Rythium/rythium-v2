@@ -1,0 +1,68 @@
+<%- include("../partials/header", { bot, user, path, perms, title: `${guild.name} - Rythium` }) %>
+
+    <!--<div class="container-sm center" style="margin-top: 30px;">
+  <div class="d-grid gap-2 col-4 mx-auto">
+    <% if (alert) { %>
+      <div class="alert alert-success" role="alert">
+        <%= alert %>
+      </div>
+    <% } %>
+    <h1><%= guild.name %></h1>
+    <hr>
+    <form method="POST">
+      <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;">Prefix:</p>
+      <p style="font-style: italic;" class="disabled">A prefix a parancsok elé kerül</p>
+      <input type="text" class="form-control" name="prefix" value="<%= settings.prefix %>" placeholder="%">
+      <br><button type="submit" class="btn btn-primary text-white">Beállítások mentése</button>
+    </form>
+  </div>
+</div>-->
+
+    <link rel="stylesheet" href="/css/settings.css">
+
+    <%- include("../partials/settingsHeader") %>
+  <div style="margin-left: 0.5%;">
+    <div class="card hide-on-mobile" style="padding: 0;" style="margin-top: 30px;">
+        <div style="margin-left: 5%;" class="d-grid gap-2">
+          <% if (alert) { %>
+            <div class="alert alert-success" role="alert">
+              <%= alert %>
+            </div>
+          <% } %>
+          <div >
+          <form method="POST">
+            <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Prefix:</strong></p>
+            <p class="disabled">A prefix a parancsok elé kerül.</p>
+            <input type="text" class="form-control" name="prefix" style="width: 230px; border-radius: 10px; " value="<%= settings.prefix %>" placeholder="%">
+            <br><button type="submit" class="butn btn btn-primary btn-save text-white"><strong>Beállítások mentése</strong></button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!--telefonnnn-->
+
+      <link rel="stylesheet" href="/css/settings-mobile.css">
+
+      <%- include("../partials/settingsHeader") %>
+  
+      <div style="margin-left: 12%;" class="card hide-on-pc" style="padding: 0;" style="margin-top: 30px;">
+          <div style="margin-left: 5%;" class="d-grid gap-2">
+            <% if (alert) { %>
+              <div class="alert alert-success" role="alert">
+                <%= alert %>
+              </div>
+            <% } %>
+            <div >
+            <form method="POST">
+              <p class="h5" style="margin-bottom: 0.5rem; margin-top: 10px;"><strong>Prefix:</strong></p>
+              <p class="disabled">A prefix a parancsok elé kerül.</p>
+              <input type="text" class="form-control" name="prefix" style="width: 230px; border-radius: 10px; " value="<%= settings.prefix %>" placeholder="%">
+              <br><button type="submit" class="butn btn btn-primary btn-save text-white"><strong>Beállítások mentése</strong></button>
+            </form>
+            </div>
+          </div>
+        </div>
+    
+    <%- include("../partials/footer") %>

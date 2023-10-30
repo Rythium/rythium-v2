@@ -1,0 +1,21 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "skipLibCheck": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "lib": [ "es5", "dom" ],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noEmitOnError": true,
+      "noImplicitAny": false,
+      "outDir": ".",
+      "removeComments": false,
+      "sourceMap": false,
+      "target": "es6",
+      "types": ["node"]
+    },
+    "exclude": [
+      "node_modules/*"
+    ]
+  }

@@ -1,0 +1,76 @@
+
+<nav style="top: 56px; height: calc(100% - 56px)" class="main-menu">
+    <ul>
+        <li>
+            <a href="/dashboard/<%= guild.id %>/prefix">
+                <i class="fa fa-brands fa-nfc-symbol"></i>
+                  <span class="nav-text">
+                    Prefix          
+                </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="/dashboard/<%= guild.id %>/udvozlo">
+                <i class="fa fa-solid fa-door-open"></i>
+                <span class="nav-text">
+                    Üdvözlő rendszer
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a href="/dashboard/<%= guild.id %>/autorole">
+                <i class="fa fa-gem fa-2x"></i>
+                <span class="nav-text">
+                    Autorole
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a href="/dashboard/<%= guild.id %>/ticket">
+                <i class="fa fa-ticket fa-2x"></i>
+                <span class="nav-text">
+                    Ticket
+                </span>
+            </a>
+
+        </li>
+        <li>
+            <a href="/dashboard/<%= guild.id %>/nyelv">
+                <i class="fa fa-language fa-2x"></i>
+                <span class="nav-text">
+                    Nyelv
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/dashboard/<%= guild.id %>/template">
+                <i class="fa fa-solid fa-paint-roller"></i>
+                <span class="nav-text">
+                    Template
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+            <div class="btn-group dropup">
+                <button style="left: 5%;" type="button" class="butn btn btn-info butn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="/svg/server.svg">
+                    <span>
+                        &nbsp<%= guild.name %>
+                </span>
+                </button>
+                <ul class="dropdown-menu" style="width: 231px;">
+                    <% user.guilds.forEach(guild=> {
+                        const permsOnGuild = new perms(guild.permissions_new);
+                        if(!permsOnGuild.has(perms.FLAGS.MANAGE_GUILD)) return;
+                        //if (!bot.guilds.cache.get(guild.id)) return; %>
+                  <li><a style="width: 220px; left: 1% ;" class="dropdown-item" href="/dashboard/<%= guild.id %>/prefix"><%= guild.name %></a></li>
+                  <% }); %>
+                </ul>
+              </div>
+        </li>  
+    </ul>
+</nav>

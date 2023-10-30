@@ -1,0 +1,143 @@
+<%- include("partials/header", { bot, user, path, title: `${user.username}#${user.discriminator} - Rythium` }) %>
+  <link rel="stylesheet" href="/css/profile.css">
+  
+  <div class="container-sm center hide-on-mobile" style="margin-top: 30px;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+      <div class="card">
+        <div class="icon-holder">
+          <img style="width: 100%;" src="<%= bannerUrl %>" class="card-img-top server-logo">
+       </div>
+
+        <div class="card-body" style="padding: 0">
+
+          <img style="right: 40%;" src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>" alt=""
+            class="card-img-top server-icon">
+          <hr class="profile">
+          <h3 style="bottom: 81%;" class="name">
+            <%= user.username%>#<%= user.discriminator%>
+          </h3>
+
+
+          <center>
+
+            <div class="grid">
+
+              <div class="flex">
+                <img src="/svg/id.svg">
+                <a>ID:</a>
+                <a style="color: #00784A;">
+                  <%= user.id%>
+                </a>
+              </div>
+
+              <%let date = (new Date(bot.users.cache.get(user.id).createdAt)).toLocaleDateString("hu-HU", { year: "numeric" ,
+              month: "2-digit" , day: "2-digit" , }).replace(/\//g, ". " ); %>
+
+              <div class="flex">
+                <img src="/svg/registerDate.svg">
+                <a>Regisztrálás dátuma:</a>
+                <a style="color: #00784A;">
+                  <%= date %>
+                </a>
+              </div>
+
+              <% if(user.id === `930857509781131314`){ 
+                var bot = `Igen`
+              } else {
+                var bot = `Nem`
+              }
+              %>
+
+              <div style="margin-top: 5%;" class="flex">
+                <img src="/svg/bot.svg">
+                <a>BOT:</a>
+                
+
+                <a style="color: #00784A;">
+                  <%= bot %>
+                </a> 
+              </div>
+
+            </div>
+
+            <a href="/logout" class="btn btn-success text-white btn-danger butn"><strong>⛔ Kijelentkezés</strong></a>
+
+          </center>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!--telefonnnnnnnnnnnnnnnnnnnnn-->
+
+  <link rel="stylesheet" href="/css/profile-mobile.css">
+
+  <div class="container-sm center hide-on-pc" style="margin-top: 30px;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+      <div class="card">
+        <div class="icon-holder">
+          <img src="<%= bannerUrl %>" class="card-img-top server-logo">
+       </div>
+
+        <div class="card-body" style="padding: 0;">
+          <img style="right: 38%;" src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>" alt=""
+            class="card-img-top server-icon">
+          <hr class="profile">
+          <h5 style="bottom: 81%;" class="name">
+            <%= user.username%>#<%= user.discriminator%>
+          </h5>
+
+
+          <center>
+
+            <% if(user.id === `930857509781131314`){ 
+              var bot = `Igen`
+            } else {
+              var bot = `Nem`
+            }
+            %>
+
+            <div class="grid">
+
+              <div class="flex">
+                <img src="/svg/id.svg">
+                <a>ID:</a>
+                <a style="color: #00784A;">
+                  <%= user.id%>
+                </a>
+              </div>
+
+              <div style="margin-top: 5%;" class="flex">
+                <img src="/svg/registerDate.svg">
+                <a>Regisztrálás dátuma:</a>
+                <a style="color: #00784A;">
+                  <%= date %>
+                </a>
+              </div>
+
+              <div style="margin-top: 5%;" class="flex">
+                <img src="/svg/bot.svg">
+                <a>BOT:</a>
+                <a style="color: #00784A;">
+                  <%= bot %>
+                </a> 
+              </div>
+
+            </div>
+
+            <a href="/logout" class="btn btn-success text-white btn-danger butn"><strong>⛔ Kijelentkezés</strong></a>
+
+          </center>
+        </div>
+      </div>
+    </div>
+
+
+  <!--majd megcsiálom a telósat XDDD-->
+
+  <%- include("partials/footer") %>
