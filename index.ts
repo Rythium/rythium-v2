@@ -41,7 +41,7 @@ const client: typeof Client = new Client({
     ],
 });
 const config: Object = require("./config.json");
-const { readdirSync } = require("fs");
+const { readdirSync, writeFileSync } = require("fs");
 const moment = require("moment");
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v10");
@@ -82,13 +82,13 @@ const log = (x: String): void => {
 //slash-command-handler
 const slashcommands: Array<any> = [];
 
-readdirSync("./commands").forEach( (file) => {
+readdirSync("./commands").forEach((file) => {
     if (path.extname(file) != ".js") return;
 
     const command = require(`./commands/${file}`);
-//    console.log(command.disabled)
-    if(command.disabled) return;
-/*     console.log(file)
+    //    console.log(command.disabled)
+    if (command.disabled) return;
+    /*     console.log(file)
     console.log(command)
     console.log(command.data)
     console.log(JSON.stringify(command.data))
@@ -107,6 +107,36 @@ client.on("ready", async () => {
     } catch (error) {
         console.error(error);
     }
+
+    await client.guilds.fetch();
+    for (const [id, guild] of client.guilds.cache) {
+        await guild.members.fetch();
+    }
+
+    const guildId = "1143529194601578569";
+    var guildData = JSON.parse(
+        JSON.stringify(client.guilds.cache.get(guildId))
+    );
+    var guild = client.guilds.cache.get(guildId);
+
+    guildData.members.forEach((e, i) => {
+        guildData.members[i] = guild.members.cache.get(e);
+
+        guildData = JSON.parse(JSON.stringify(guildData));
+
+        guildData.members[i].roles.forEach((f, j) => {
+            guildData.members[i].roles[j] = guild.roles.cache.get(f);
+        });
+    });
+
+    guildData.channels.forEach((e, i) => {
+        guildData.channels[i] = guild.channels.cache.get(e);
+    });
+    guildData.roles.forEach((e, i) => {
+        guildData.roles[i] = guild.roles.cache.get(e);
+    });
+
+    writeFileSync("data.json", JSON.stringify(guildData, null, 4));
     log(`${client.user.username} started!`);
 
     initDash(client);

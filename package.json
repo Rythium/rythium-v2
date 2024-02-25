@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc && node . --trace-deprecation",
-    "prod": "tsc && node . --trace-deprecation"
+    "test": "node test",
+    "dev": "tsc && node . --trace-deprecation && rm -rf *.js",
+    "prod": "tsc && node . && rm -rf *.js"
   },
   "repository": {
     "type": "git",
